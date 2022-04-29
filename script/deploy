@@ -1,0 +1,10 @@
+#!/bin/sh
+ ssh vagrant@172.28.128.13
+ sudo su 
+ <<EOF
+ cd ~/node-app
+ git pull
+ npm install 
+ pm2 restart all
+ exit
+EOF
